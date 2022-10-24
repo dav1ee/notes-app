@@ -1,0 +1,61 @@
+@import './variables';
+@import './fonts';
+@import './libs/normalize';
+@import './components/all';
+
+body {
+  background-color: $background;
+}
+
+.container {
+  max-width: 460px;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.folders-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+
+  @media (min-width: 440px) {
+    padding: 0 40px;
+  }
+}
+
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.dot {
+  width: 38px;
+  height: 38px;
+  background-color: $purple-light;
+  border-radius: 30px;
+}
+
+.preloader {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-back {
+  svg {
+    width: 25px;
+    height: 25px;
+
+    path {
+      fill: $white;
+    }
+  }
+}

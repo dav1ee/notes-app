@@ -1,0 +1,39 @@
+.full-note {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  &__item {
+    margin-top: 25px;
+
+    &-title {
+      margin-bottom: 20px;
+
+      textarea {
+        width: 100%;
+        height: 50px;
+        font-size: 32px;
+      }
+    }
+
+    &-text {
+      textarea {
+        width: 100%;
+        height: 650px;
+        font-size: 18px;
+        line-height: 32px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

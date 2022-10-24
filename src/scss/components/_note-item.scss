@@ -1,0 +1,25 @@
+.note-item {
+  width: 95%;
+  max-width: 320px;
+  height: 90px;
+  padding: 20px;
+  background-color: $purple-with-opacity;
+  border-radius: 20px;
+  box-shadow: $shadow;
+
+  display: flex;
+  align-items: center;
+
+  &__name {
+    margin-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

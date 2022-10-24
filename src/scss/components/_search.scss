@@ -1,0 +1,39 @@
+.search {
+  width: 100%;
+  max-width: 350px;
+  height: 50px;
+  margin: 0 auto 30px;
+  padding: 0 25px;
+  background-color: $purple-with-opacity;
+  border-radius: 25px;
+  box-shadow: $shadow;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 15px 10px 20px;
+    border: 0;
+    background-color: transparent;
+    font-family: 'Montserrat';
+    color: $white;
+    font-size: 14px;
+    letter-spacing: $letter-spacing;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+}

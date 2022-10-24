@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Impact LT Std';
+  src: url('./fonts/Impact/ImpactLTStd.eot');
+  src: local('Impact LT Std Roman'), local('ImpactLTStd'),
+    url('./fonts/Impact/ImpactLTStd.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Impact/ImpactLTStd.woff2') format('woff2'),
+    url('./fonts/Impact/ImpactLTStd.woff') format('woff'),
+    url('./fonts/Impact/ImpactLTStd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat/Montserrat-ExtraLight.eot');
+  src: local('Montserrat ExtraLight'), local('Montserrat-ExtraLight'),
+    url('./fonts/Montserrat/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/Montserrat/Montserrat-ExtraLight.woff2') format('woff2'),
+    url('./fonts/Montserrat/Montserrat-ExtraLight.woff') format('woff'),
+    url('./fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}

@@ -1,0 +1,17 @@
+.circle-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  background-color: $purple-with-opacity;
+  border: 0;
+  border-radius: 50px;
+  box-shadow: $shadow;
+
+  svg {
+    path {
+      fill: $white;
+    }
+  }
+}

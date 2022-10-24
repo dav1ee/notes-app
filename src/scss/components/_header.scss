@@ -1,0 +1,21 @@
+.header {
+  margin-bottom: 30px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 32px;
+    letter-spacing: $letter-spacing;
+  }
+
+  &__subtitle {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    letter-spacing: $letter-spacing;
+    text-transform: uppercase;
+  }
+
+  .arrow-back {
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,32 @@
+.folder-item {
+  width: 133px;
+  height: 133px;
+  display: block;
+  background-color: $purple-with-opacity;
+  border-radius: 20px;
+  box-shadow: $shadow;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__name {
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .dot {
+    margin-top: 35px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
