@@ -35,7 +35,7 @@ const NotesPage: React.FC = () => {
         </div>
       )}
 
-      <CircleButton />
+      {/* <CircleButton /> */}
     </>
   );
 };

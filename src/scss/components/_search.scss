@@ -7,11 +7,10 @@
   background-color: $purple-with-opacity;
   border-radius: 25px;
   box-shadow: $shadow;
-
   display: flex;
   align-items: center;
-
   position: relative;
+  transition: 0.1s ease-in-out;
 
   &__icon {
     width: 20px;
@@ -23,17 +22,10 @@
   }
 
   input {
-    width: 100%;
     padding: 10px 15px 10px 20px;
-    border: 0;
-    background-color: transparent;
-    font-family: 'Montserrat';
-    color: $white;
-    font-size: 14px;
-    letter-spacing: $letter-spacing;
+  }
 
-    &::placeholder {
-      color: $white;
-    }
+  &:active {
+    transform: scale(0.9);
   }
 }

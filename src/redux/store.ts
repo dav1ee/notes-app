@@ -4,12 +4,14 @@ import { useDispatch } from 'react-redux';
 import folderReducer from './slices/folder';
 import noteReducer from './slices/note';
 import searchReducer from './slices/search';
+import modalReducer from './slices/modal';
 
 export const store = configureStore({
   reducer: {
     folder: folderReducer,
     note: noteReducer,
     search: searchReducer,
+    modal: modalReducer,
   },
 });
 

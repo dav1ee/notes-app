@@ -8,7 +8,6 @@ export type NoteType = {
   folderId: string;
   title: string;
   text: string;
-  date: string;
 };
 
 export enum Status {
@@ -17,7 +16,12 @@ export enum Status {
   ERROR = 'error',
 }
 
-export type SearchParams = {
+export type SearchParamsFetch = {
   pathname: string;
   notesValue: string;
+};
+
+export type SearchParamsDelete = {
+  noteId: string;
+  folderId: string;
 };

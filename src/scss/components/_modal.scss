@@ -1,0 +1,88 @@
+.modal {
+  width: 300px;
+  height: auto;
+  background-color: $purple;
+  border-radius: 20px;
+  box-shadow: $shadow;
+
+  position: fixed;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: $purple-light;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+
+      path {
+        fill: $white;
+      }
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &__header {
+    border-bottom: 2px solid $purple-light;
+    text-align: center;
+    font-size: 18px;
+
+    input {
+      height: 50px;
+      border-radius: 20px 20px 0 0;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    button {
+      width: 50%;
+      height: 50px;
+      background-color: transparent;
+      border: 0;
+      border-left: 1px solid $purple-light;
+      border-radius: 0 0 20px 0;
+      color: $white;
+      font-size: 16px;
+
+      &:first-child {
+        border-right: 1px solid $purple-light;
+        border-radius: 0 0 0 20px;
+      }
+
+      &:active {
+        background-color: $purple-light;
+      }
+    }
+  }
+
+  &__body--add-folder {
+    button {
+      width: 100%;
+      height: 50px;
+      background-color: transparent;
+      border: 0;
+      border-radius: 0 0 20px 20px;
+      color: $white;
+      font-size: 16px;
+
+      &:active {
+        background-color: $purple-light;
+      }
+    }
+  }
+}

@@ -19,3 +19,19 @@ export const fetchFolders = createAsyncThunk<FolderType[], SearchParams>(
     }
   },
 );
+
+export const createFolder = createAsyncThunk<FolderType, FolderType>(
+  'folders/createFolder',
+  async (obj, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.post<FolderType>(
+        'https://634ab78e5df95285141729e5.mockapi.io/folders',
+        obj,
+      );
+
+      return data;
+    } catch (err) {
+      return rejectWithValue((err as Error).message);
+    }
+  },
+);

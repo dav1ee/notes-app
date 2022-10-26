@@ -55,6 +55,24 @@ textarea {
   border: 0;
   resize: none;
   color: $white;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+input {
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+  font-family: 'Montserrat';
+  color: $white;
+  font-size: 14px;
+  letter-spacing: $letter-spacing;
+
+  &::placeholder {
+    color: $white;
+  }
 }
 
 @mixin noselect {

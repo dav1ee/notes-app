@@ -6,6 +6,7 @@
   background-color: $purple-with-opacity;
   border-radius: 20px;
   box-shadow: $shadow;
+  transition: 0.1s ease-in-out;
 
   display: flex;
   align-items: center;
@@ -21,5 +22,9 @@
 
   &:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 }
