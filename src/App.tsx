@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import FoldersPage from './pages/FoldersPage';
 import NotesPage from './pages/NotesPage';
@@ -9,6 +8,12 @@ import FullNote from './pages/FullNote';
 import './scss/app.scss';
 
 const App: React.FC = () => {
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    navigate('/folders');
+  }, []);
+
   return (
     <div className="container">
       <Routes>
