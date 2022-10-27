@@ -8,7 +8,7 @@ import { deleteNote } from '../redux/slices/note/asyncActions';
 import { getNoteSelector } from '../redux/slices/note/selectors';
 import { setOpen } from '../redux/slices/modal';
 
-import { ArrowBack, Modal } from '../components';
+import { ArrowBack, Modal, NoteBody } from '../components';
 
 const FullNote: React.FC = () => {
   const { noteId } = useParams();
@@ -57,14 +57,7 @@ const FullNote: React.FC = () => {
       </div>
 
       {note.map((note) => (
-        <div key={note.id} className="full-note__item">
-          <div className="full-note__item-title">
-            <textarea defaultValue={note.title} placeholder="Заголовок" />
-          </div>
-          <div className="full-note__item-text">
-            <textarea defaultValue={note.text} placeholder="Текст" />
-          </div>
-        </div>
+        <NoteBody key={note.id} {...note} />
       ))}
 
       {isOpen && (

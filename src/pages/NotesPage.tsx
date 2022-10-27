@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
 
 import { RootState, useAppDispatch } from '../redux/store';
-import { fetchNotes } from '../redux/slices/note/asyncActions';
+import { fetchNotes, createNote } from '../redux/slices/note/asyncActions';
 
 import { Header, NoteItem, Search, Preloader, CircleButton } from '../components';
 
@@ -13,6 +13,19 @@ const NotesPage: React.FC = () => {
 
   const { notes, status } = useSelector((state: RootState) => state.note);
   const { notesValue } = useSelector((state: RootState) => state.search);
+
+  const reversedNotes = [...notes].reverse();
+
+  const onCreateNote = () => {
+    const obj = {
+      id: 'id',
+      folderId: pathname.split('/')[2],
+      title: '',
+      text: '',
+    };
+
+    dispatch(createNote(obj));
+  };
 
   React.useEffect(() => {
     dispatch(fetchNotes({ pathname, notesValue }));
@@ -27,7 +40,7 @@ const NotesPage: React.FC = () => {
         <Preloader />
       ) : (
         <div className="notes-list">
-          {notes.map((item) => (
+          {reversedNotes.map((item) => (
             <Link to={`${pathname}/${item.id}`} key={item.id} className="note-item">
               <NoteItem title={item.title} />
             </Link>
@@ -35,7 +48,7 @@ const NotesPage: React.FC = () => {
         </div>
       )}
 
-      {/* <CircleButton /> */}
+      <CircleButton onClick={onCreateNote} />
     </>
   );
 };

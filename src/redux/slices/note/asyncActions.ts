@@ -36,3 +36,35 @@ export const deleteNote = createAsyncThunk<NoteType[], SearchParamsDelete>(
     }
   },
 );
+
+export const createNote = createAsyncThunk<NoteType, NoteType>(
+  'notes/createNote',
+  async (obj, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.post<NoteType>(
+        `https://634ab78e5df95285141729e5.mockapi.io/folders/${obj.folderId}/notes`,
+        obj,
+      );
+
+      return data;
+    } catch (err) {
+      return rejectWithValue((err as Error).message);
+    }
+  },
+);
+
+export const updateNote = createAsyncThunk<NoteType, NoteType>(
+  'notes/updateNote',
+  async (obj, { rejectWithValue }) => {
+    try {
+      const { data } = await axios.put<NoteType>(
+        `https://634ab78e5df95285141729e5.mockapi.io/folders/${obj.folderId}/notes/${obj.id}`,
+        obj,
+      );
+
+      return data;
+    } catch (err) {
+      return rejectWithValue((err as Error).message);
+    }
+  },
+);

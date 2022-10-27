@@ -49,7 +49,7 @@ const FoldersPage: React.FC = () => {
         </div>
       )}
 
-      <CircleButton onClick={onSetModal} />
+      <CircleButton onClick={() => onSetModal(true)} />
 
       {isOpen && (
         <Modal onClose={onSetModal}>
