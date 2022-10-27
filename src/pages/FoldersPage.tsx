@@ -14,6 +14,7 @@ import {
   CircleButton,
   Modal,
   AddFolder,
+  ErrorBlock,
 } from '../components';
 
 const FoldersPage: React.FC = () => {
@@ -31,6 +32,10 @@ const FoldersPage: React.FC = () => {
     dispatch(fetchFolders({ foldersValue }));
     onSetModal(false);
   }, [dispatch, foldersValue]);
+
+  if (status === 'error') {
+    return <ErrorBlock />;
+  }
 
   return (
     <>

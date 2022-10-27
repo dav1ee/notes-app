@@ -5,7 +5,7 @@ import { useLocation, Link } from 'react-router-dom';
 import { RootState, useAppDispatch } from '../redux/store';
 import { fetchNotes, createNote } from '../redux/slices/note/asyncActions';
 
-import { Header, NoteItem, Search, Preloader, CircleButton } from '../components';
+import { Header, NoteItem, Search, Preloader, CircleButton, ErrorBlock } from '../components';
 
 const NotesPage: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -30,6 +30,10 @@ const NotesPage: React.FC = () => {
   React.useEffect(() => {
     dispatch(fetchNotes({ pathname, notesValue }));
   }, [dispatch, pathname, notesValue]);
+
+  if (status === 'error') {
+    return <ErrorBlock />;
+  }
 
   return (
     <>

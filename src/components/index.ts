@@ -8,3 +8,4 @@ export * from './CircleButton';
 export * from './Modal';
 export * from './AddFolder';
 export * from './NoteBody';
+export * from './ErrorBlock';
